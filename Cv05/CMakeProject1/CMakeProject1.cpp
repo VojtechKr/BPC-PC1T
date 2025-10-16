@@ -21,12 +21,6 @@ double skalarniSoucin(double a[3], double b[3]) {
 }
 
 
-void vektorovySoucin(double a[3], double b[3], double c[3]) {
-	c[0] = a[1]*b[2] - a[2]*b[1];
-	c[1] = a[2]*b[0] - a[0]*b[2];
-	c[2] = a[0]*b[1] - a[1]*b[0];
-}
-
 int main()
 {
 	double a[3], b[3], c[3];
@@ -47,9 +41,6 @@ int main()
 
 	cout << "Skalarni soucin A*B je: " << skalarniSoucin(a,b) << endl;
 
-
-	vektorovySoucin(a, b, c);
-	cout << "Vektorovy soucin A x B je: (" << c[0] << ", " << c[1] << ", " << c[2] << ")" << endl;
 
 	return 0;
 }
