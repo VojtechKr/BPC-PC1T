@@ -29,27 +29,26 @@ void vektorovySoucin(double a[3], double b[3], double c[3]) {
 
 int main()
 {
-	double a[3], b[3], c[3];
+	double a[3], b[3], c[3], vektSoucin[3];
 
-	cout << "Vektor A (3 hodnoty oddelene carkou) ";
-	char sep;
-	cin >> a[0] >> sep >> a[1] >> sep >> a[2];
+	printf("Vektor A (3 hodnoty oddelene carkou) ");
+	scanf("%lf,%lf,%lf", &a[0], &a[1], &a[2]);
 
-	cout << "Vektor B (3 hodnoty oddelene carkou) ";
-	cin >> b[0] >> sep >> b[1] >> sep >> b[2];
+	printf("Vektor B (3 hodnoty oddelene carkou) ");
+	scanf("%lf,%lf,%lf", &b[0], &b[1], &b[2]);
 
 
 	soucet(a, b, c);
-	cout << "Soucet vektoru A+B je: (" << c[0] << ", " << c[1] << ", " << c[2] << ")" << endl;
+	double velikostA = velikost(a);	
+	double skalarni = skalarniSoucin(a, b);
+	vektorovySoucin(a, b, vektSoucin);
 
 
-	cout << "Velikost vektoru A je: " << velikost(a) << endl;
+	printf("Soucet A + B je: (%.6f, %.6f, %.6f)\n", c[0], c[1], c[2]);
+	printf("Velikost A je: %.6f\n", velikostA);
+	printf("Skalarni soucin A*B je: %.6f\n", skalarni);
+	printf("Vektorovy soucin A x B je: (%.6f, %.6f, %.6f)\n", vektSoucin[0], vektSoucin[1], vektSoucin[2]);
 
-	cout << "Skalarni soucin A*B je: " << skalarniSoucin(a, b) << endl;
-
-
-	vektorovySoucin(a, b, c);
-	cout << "Vektorovy soucin A x B je: (" << c[0] << ", " << c[1] << ", " << c[2] << ")" << endl;
 
 	return 0;
 }
