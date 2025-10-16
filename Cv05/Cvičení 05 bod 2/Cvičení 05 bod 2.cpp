@@ -31,7 +31,7 @@ int main()
 {
 	double a[3], b[3], c[3];
 
-	cout << "Vektor A (3 hodnoty oddelene carkou); ";
+	cout << "Vektor A (3 hodnoty oddelene carkou) ";
 	char sep;
 	cin >> a[0] >> sep >> a[1] >> sep >> a[2];
 
